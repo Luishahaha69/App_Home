@@ -1,0 +1,10 @@
+# Flutter/Dart
+**/build/
+.dart_tool/
+.packages
+.pub/
+.idea/
+.vscode/
+
+# Node
+backend/node_modules/

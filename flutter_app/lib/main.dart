@@ -7,7 +7,7 @@ void main() {
   runApp(const MyApp());
 }
 
-const backendBase = 'https://musical-space-couscous-7v46w6xw95gqhrvgx-3000.app.github.dev';
+const backendBase = 'http://musical-space-couscous-7v46w6xw95gqhrvgx-3000.app.github.dev';
 
 
 class MyApp extends StatelessWidget {

@@ -5,11 +5,28 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
 app.get('/', (req, res) => {
   res.send('🏃‍♂️ Backend de deportes corriendo correctamente');
 });
 
+app.post('/login', (req, res) => {
+  const { email, password } = req.body; 
+  
+  const USER_CORRECTO = 'user@example.com';
+  const PASS_CORRECTA = 'password';
+
+  if (email === USER_CORRECTO && password === PASS_CORRECTA) {
+    return res.status(200).json({ 
+        message: "Inicio de sesión exitoso",
+        user: { email: email, name: "Usuario Deportes" },
+        token: "FAKE_AUTH_TOKEN_123" 
+    });
+  } else {
+    return res.status(401).json({ 
+        message: "Credenciales inválidas" 
+    });
+  }
+});
 
 app.get('/api/categories', (req, res) => {
   res.json([
